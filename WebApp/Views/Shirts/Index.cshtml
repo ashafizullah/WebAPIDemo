@@ -1,7 +1,11 @@
 ﻿@model List<Shirt>
 
+<div class="text-danger" asp-validation-summary="All"></div>
+
 <h3>Shirts</h3>
 <br />
+@if (Model != null)
+{
 <table class="table table-striped">
     <thead>
         <tr>
@@ -14,18 +18,19 @@
         </tr>
     </thead>
     <tbody>
-        @foreach(var shirt in Model)
-        {
+        @foreach (var shirt in Model)
+            {
             <tr>
                 <td>@shirt.Brand</td>
                 <td>@shirt.Gender</td>
                 <td>@shirt.Color</td>
                 <td>@shirt.Size</td>
                 <td>@(shirt.Price > 0 ? shirt.Price.ToString("c") : "")</td>
-                <td><a class="btn btn-link" asp-controller="Shirts" asp-action="Edit" asp-route-shirtId="@shirt.ShirtId">Edit</a></td>
+                <td><a class="btn btn-link" asp-controller="Shirts" asp-action="Update" asp-route-shirtId="@shirt.ShirtId">Edit</a></td>
                 <td><a class="btn btn-link" asp-controller="Shirts" asp-action="Delete" asp-route-shirtId="@shirt.ShirtId">Delete</a></td>
             </tr>
-        }
+            }
     </tbody>
 </table>
+}
 <a class="btn btn-primary" asp-controller="shirts" asp-action="Create">Create</a>
