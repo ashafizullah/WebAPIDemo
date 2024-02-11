@@ -53,7 +53,7 @@ namespace WebAPIDemo.Controllers
             shirtToUpdate.Price = shirt.Price;
             shirtToUpdate.Size = shirt.Size;
             shirtToUpdate.Color = shirt.Color;
-            shirtToUpdate.Gender = shirt.Brand;
+            shirtToUpdate.Gender = shirt.Gender;
 
 			db.SaveChanges();
 
