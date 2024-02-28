@@ -18,6 +18,9 @@
     <None Remove="Filters\ActionFilters\" />
     <None Remove="Filters\ExceptionFilters\" />
     <None Remove="Data\" />
+    <None Remove="Authority\" />
+    <None Remove="Filters\AuthFilters\" />
+    <None Remove="Attributes\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Controllers\" />
@@ -28,6 +31,9 @@
     <Folder Include="Filters\ActionFilters\" />
     <Folder Include="Filters\ExceptionFilters\" />
     <Folder Include="Data\" />
+    <Folder Include="Authority\" />
+    <Folder Include="Filters\AuthFilters\" />
+    <Folder Include="Attributes\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.1" />
@@ -39,5 +45,6 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.3.1" />
   </ItemGroup>
 </Project>
